@@ -1,0 +1,141 @@
+﻿{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Innovation Network</title>
+
+	<!-- CSS -->
+	<!-- Bootstrap core CSS -->
+	<link href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+
+	<!-- Font Awesome CSS -->
+	<link href="{% static 'assets/css/font-awesome.min.css' %}" rel="stylesheet" media="screen">
+
+	<!-- Animate css -->
+	<link href="{% static 'assets/css/animate.css' %}" rel="stylesheet">
+
+	<!-- Custom styles CSS -->
+	<link href="{% static 'assets/css/style.css' %}" rel="stylesheet" media="screen">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/logo/innovators_network_sacco_icon.ico' %}">
+
+</head>
+<body>
+
+	<!-- Preloader -->
+
+	<div id="preloader">
+		<div id="status"></div>
+	</div>
+
+	<!-- Intro section start -->
+
+	<section class="intro">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+                    {% if success %}
+                    <div class="alert alert-success" role="alert">
+                        {{ success }}
+                    </div>
+                    {% endif %}
+					<div class="i_header">
+						<div class="logo">
+							<img src="{% static 'assets/logo/Innovators_Network_SACCO_Logo_FA_Hi_Res-01.png' %}" alt="Innovators Network">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Intro section end -->
+
+	<!-- About section start -->
+
+	<section class="about">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-12">
+					<h2>Vision</h2>
+					<div class="header-deveider"></div>
+					<p class="wow fadeInUp">
+						To be the leading innovation catalyst in every setting
+					</p>
+				</div>
+
+			</div>
+			<div class="row">
+
+				<div class="col-md-12">
+					<h2>Mission</h2>
+					<div class="header-deveider"></div>
+					<p class="wow fadeInUp">
+						Through the creation of local networks, iN shall bring together passion, talent and finance to
+                        actualize member innovations
+					</p>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<!-- About section end -->
+
+	<!-- Footer start -->
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+
+				<div id="subscribe" class="col-md-12 subtitle">
+					<h2>Subscribe</h2>
+					<div class="header-deveider"></div>
+					<p class="wow fadeInUp">
+                        Subscribe and we shall update you on our latest advancements.
+                    </p>
+				</div>
+
+				<div class="col-md-12">
+					<form class="subscription-form form-inline wow fadeInUp" role="form" action="/" method="post">
+                        {% csrf_token %}
+						<div class="form-group">
+							<label class="sr-only" for="sub-email">Your Email</label>
+							<input type="email" id="email" name="email" class="form-control input-box" placeholder="Your Email" >
+						</div>
+						<button type="submit" class="btn btn-default btn-theme">Subscribe</button>
+					</form>
+					<div class="subscription-message"></div>
+				</div>
+
+				<div id="share" class="col-md-12 wow fadeInUp">
+					<p class="copyright">
+						© 2015 Innovators Network, All Rights Reserved
+					</p>
+				</div>
+
+			</div>
+		</div>
+	</footer>
+
+	<!-- Footer end -->
+
+	<!-- Javascript files -->
+	<!-- jQuery -->
+	<script src="{% static 'assets/js/jquery-1.11.1.min.js' %}"></script>
+	<!-- Bootstrap JS -->
+	<script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+	<!-- WOW - Reveal Animations When You Scroll -->
+	<script src="{% static 'assets/js/wow.min.js' %}"></script>
+	<!-- Smooth scroll -->
+	<script src="{% static 'assets/js/smoothscroll.js' %}"></script>
+	<!-- Custom scripts -->
+	<script src="{% static 'assets/js/custom.js' %}"></script>
+
+</body>
+</html>
