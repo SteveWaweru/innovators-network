@@ -2,140 +2,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	<meta name="author" content="">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-	<title>Innovation Network</title>
+    <title>INSACCO | Innovation Network</title>
 
-	<!-- CSS -->
-	<!-- Bootstrap core CSS -->
-	<link href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+    <!-- CSS -->
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
 
-	<!-- Font Awesome CSS -->
-	<link href="{% static 'assets/css/font-awesome.min.css' %}" rel="stylesheet" media="screen">
+    <!-- Font Awesome CSS -->
+    <link href="{% static 'assets/css/font-awesome.min.css' %}" rel="stylesheet" media="screen">
 
-	<!-- Animate css -->
-	<link href="{% static 'assets/css/animate.css' %}" rel="stylesheet">
+    <!-- Animate css -->
+    <link href="{% static 'assets/css/animate.css' %}" rel="stylesheet">
 
-	<!-- Custom styles CSS -->
-	<link href="{% static 'assets/css/style.css' %}" rel="stylesheet" media="screen">
+    <!-- Custom styles CSS -->
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet" media="screen">
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/logo/innovators_network_sacco_icon.ico' %}">
 
 </head>
 <body>
 
-	<!-- Preloader -->
+<!-- Preloader -->
 
-	<div id="preloader">
-		<div id="status"></div>
-	</div>
+<div id="preloader">
+    <div id="status"></div>
+</div>
 
-	<!-- Intro section start -->
+<!-- Intro section start -->
 
-	<section class="intro">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-                    {% if success %}
+<section class="intro">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                {% if success %}
                     <div class="alert alert-success" role="alert">
                         {{ success }}
                     </div>
-                    {% endif %}
-					<div class="i_header">
-						<div class="logo">
-							<img src="{% static 'assets/logo/Innovators_Network_SACCO_Logo_FA_Hi_Res-01.png' %}" alt="Innovators Network">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+                {% endif %}
+                <div class="i_header">
+                    <div class="logo">
+                        <img src="{% static 'assets/logo/Innovators_Network_SACCO_Logo_FA_Hi_Res-01.png' %}"
+                             alt="Innovators Network">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-	<!-- Intro section end -->
+<!-- Intro section end -->
 
-	<!-- About section start -->
+<!-- About section start -->
 
-	<section class="about">
-		<div class="container">
-			<div class="row">
+<section class="about">
+    <div class="container">
+        <div class="row">
 
-				<div class="col-md-12">
-					<h2>Vision</h2>
-					<div class="header-deveider"></div>
-					<p class="wow fadeInUp">
-						To be the leading innovation catalyst in every setting
-					</p>
-				</div>
+            <div class="col-md-12">
+                <h2>ABOUT</h2>
+                <div class="header-deveider"></div>
+                <p class="wow fadeInUp">
+                    The Innovators Network Savings and Credit Co-operative Society (iN SACCO) serves innovators, ICT
+                    professionals and tech-startups with a custom savings and credit product. The iN SACCO shall be a
+                    collective platform for financial resources, pooling of ICT talent, enabling local innovation and
+                    supporting the local ICT sector. iN SACCO seeks to augment ICT sector players by capturing the
+                    opportunity for a unified tech community around savings, credit and investment into the local ICT
+                    sector. The iN SACCO savings and credit facility seeks to be the ubiquitous facility that can be
+                    accessed by any local innovator, ICT professional, or tech-innovator irrespective of their
+                    background. A community unified!
+                </p>
+            </div>
 
-			</div>
-			<div class="row">
+        </div>
+        <div class="row">
 
-				<div class="col-md-12">
-					<h2>Mission</h2>
-					<div class="header-deveider"></div>
-					<p class="wow fadeInUp">
-						Through the creation of local networks, iN shall bring together passion, talent and finance to
-                        actualize member innovations
-					</p>
-				</div>
+            <div class="col-md-12">
+                <h2>Vision</h2>
+                <div class="header-deveider"></div>
+                <p class="wow fadeInUp">
+                    To be the leading innovation catalyst in every setting
+                </p>
+            </div>
 
-			</div>
-		</div>
-	</section>
+        </div>
+        <div class="row">
 
-	<!-- About section end -->
+            <div class="col-md-12">
+                <h2>Mission</h2>
+                <div class="header-deveider"></div>
+                <p class="wow fadeInUp">
+                    Through the creation of local networks, iN SACCO shall bring together passion, talent and finance to
+                    actualize member innovations
+                </p>
+            </div>
 
-	<!-- Footer start -->
+        </div>
+    </div>
+</section>
 
-	<footer class="footer">
-		<div class="container">
-			<div class="row">
+<!-- About section end -->
 
-				<div id="subscribe" class="col-md-12 subtitle">
-					<h2>Subscribe</h2>
-					<div class="header-deveider"></div>
-					<p class="wow fadeInUp">
-                        Subscribe and we shall update you on our latest advancements.
-                    </p>
-				</div>
+<!-- Footer start -->
 
-				<div class="col-md-12">
-					<form class="subscription-form form-inline wow fadeInUp" role="form" action="/" method="post">
-                        {% csrf_token %}
-						<div class="form-group">
-							<label class="sr-only" for="sub-email">Your Email</label>
-							<input type="email" id="email" name="email" class="form-control input-box" placeholder="Your Email" >
-						</div>
-						<button type="submit" class="btn btn-default btn-theme">Subscribe</button>
-					</form>
-					<div class="subscription-message"></div>
-				</div>
+<footer class="footer">
+    <div class="container">
+        <div class="row">
 
-				<div id="share" class="col-md-12 wow fadeInUp">
-					<p class="copyright">
-						© 2015 Innovators Network, All Rights Reserved
-					</p>
-				</div>
+            <div id="subscribe" class="col-md-12 subtitle">
+                <h2>Subscribe</h2>
+                <div class="header-deveider"></div>
+                <p class="wow fadeInUp">
+                    Subscribe and we shall keep you posted on our latest advancements.
+                </p>
+            </div>
 
-			</div>
-		</div>
-	</footer>
+            <div class="col-md-12">
+                <form class="subscription-form form-inline wow fadeInUp" role="form" action="/" method="post">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label class="sr-only" for="sub-email">Your Email</label>
+                        <input type="email" id="email" name="email" class="form-control input-box"
+                               placeholder="Your Email">
+                    </div>
+                    <button type="submit" class="btn btn-default btn-theme">Subscribe</button>
+                </form>
+                <div class="subscription-message"></div>
+            </div>
 
-	<!-- Footer end -->
+            <div id="share" class="col-md-12 wow fadeInUp">
+                <p class="copyright">
+                    © 2016 Innovators Network SACCO, All Rights Reserved
+                </p>
+            </div>
 
-	<!-- Javascript files -->
-	<!-- jQuery -->
-	<script src="{% static 'assets/js/jquery-1.11.1.min.js' %}"></script>
-	<!-- Bootstrap JS -->
-	<script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
-	<!-- WOW - Reveal Animations When You Scroll -->
-	<script src="{% static 'assets/js/wow.min.js' %}"></script>
-	<!-- Smooth scroll -->
-	<script src="{% static 'assets/js/smoothscroll.js' %}"></script>
-	<!-- Custom scripts -->
-	<script src="{% static 'assets/js/custom.js' %}"></script>
+        </div>
+    </div>
+</footer>
+
+<!-- Footer end -->
+
+<!-- Javascript files -->
+<!-- jQuery -->
+<script src="{% static 'assets/js/jquery-1.11.1.min.js' %}"></script>
+<!-- Bootstrap JS -->
+<script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+<!-- WOW - Reveal Animations When You Scroll -->
+<script src="{% static 'assets/js/wow.min.js' %}"></script>
+<!-- Smooth scroll -->
+<script src="{% static 'assets/js/smoothscroll.js' %}"></script>
+<!-- Custom scripts -->
+<script src="{% static 'assets/js/custom.js' %}"></script>
 
 </body>
 </html>
